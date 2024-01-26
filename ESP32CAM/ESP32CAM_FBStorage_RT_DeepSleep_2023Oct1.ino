@@ -19,24 +19,24 @@ int NightTime = 600; /*Time ESP will go to sleep 10 hours (10*60min)*/
 RTC_DATA_ATTR bool takeNewPhoto = true;
 
 //Replace with your network credentials
-const char* ssid = "EM-10";
-const char* password = "C0nn3ctwifi";
+const char* ssid = "wifi ssid";
+const char* password = "wifi password";
 
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 7*3600;
 const int   daylightOffset_sec = 0;
 
 // Insert Firebase project API Key
-#define API_KEY "AIzaSyDEBVsIrGlcLMReZCVDnbEWGleoanq4UoE"
+#define API_KEY "input your API key"
 
 // Insert Authorized Email and Corresponding Password
-#define USER_EMAIL "ayyimtesting1@gmail.com"
-#define USER_PASSWORD "pa55word"
+#define USER_EMAIL "input email"
+#define USER_PASSWORD "input password"
 
 // Insert Firebase storage bucket ID e.g bucket-name.appspot.com
 #define STORAGE_BUCKET_ID "myhalte.appspot.com"
 // Insert RTDB URLefine the RTDB URL
-//#define DATABASE_URL "https://myhalte-default-rtdb.asia-southeast1.firebasedatabase.app/"
+//#define DATABASE_URL ""
 
 // Photo File Name to save in LittleFS
 #define FILE_PHOTO_PATH "/photo.jpg"
@@ -208,8 +208,6 @@ void setup() {time_t now;
   auth.user.password = USER_PASSWORD;
   //Assign the callback function for the long running token generation task
   configF.token_status_callback = tokenStatusCallback; //see addons/TokenHelper.h
-  // Assign the RTDB URL (required)
-  //configF.database_url = DATABASE_URL;
 
   Firebase.begin(&configF, &auth);
   Firebase.reconnectWiFi(true);

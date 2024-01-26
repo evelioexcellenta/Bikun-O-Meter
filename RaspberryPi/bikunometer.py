@@ -31,10 +31,10 @@ labelWeight=(2)
 boxColor=(255,0,0)
 boxWeight=2
 
-cred = credentials.Certificate("bikunometer-6a9b1-firebase-adminsdk-k4wlj-297cd578d8.json")
+cred = credentials.Certificate("input your credentials")
 firebase_admin.initialize_app(cred,{
-    'storageBucket':'bikunometer-6a9b1.appspot.com',
-    'databaseURL' : 'https://bikunometer-6a9b1-default-rtdb.asia-southeast1.firebasedatabase.app'
+    'storageBucket':'inopout your Bucket',
+    'databaseURL' : 'input your URL'
     })
 
 
