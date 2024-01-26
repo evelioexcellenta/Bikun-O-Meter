@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"> </script>
+</head>
+
+<body>
+    <div class="iphone" style="background-color:cornflowerblue;">
+        <div class="overlap-wrapper"
+            style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div class="overlap">
+                <div class="box">
+                    <div class="rectangle-coklat"></div>
+                </div>
+                <div class="rectangle"></div>
+                <img class="group" src="img/group-16.png" />
+                <div class="text-wrapper">Bikun O'Meter</div>
+                <div class="div">Halte Vokasi</div>
+                <div class="group-2">
+                    <div class="overlap-group">
+                        <div class="text-wrapper-2" style="font-size: 12.5px;">Jumlah Orang di Halte</div>
+                    </div>
+                    <div class="overlap-group-wrapper">
+                        <div class="overlap-group-2">
+                            <div class="rectangle-2">
+                                <p class="value" id="person" style="margin-top: 5px;"> 00 </p>
+                                <p class="value" id="bus" style="display: none;"> 0 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-3">
+                    <div class="overlap-2">
+                        <div class="text-wrapper-4">Ramai</div>
+                        <div class="text-wrapper-5">Sepi</div>
+                        <div class="overlap-3">
+                            <input type="range" min="0" max="20" value="0" class="slider" id="myRange" disabled />
+                            <!-- <div class="rectangle-3"></div> -->
+                        </div>
+                    </div>
+                    <div class="div-wrapper">
+                        <div class="overlap-group-3">
+                            <div class="rectangle-4"></div>
+                            <div class="text-wrapper-2" style="font-size: 12.5px;">Tingkat Keramaian</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-4">
+                    <div class="overlap-4">
+                        <div class="rectangle-5"></div>
+                        <div class="rectangle-6"></div>
+                        <div class="rectangle-7"></div>
+                        <div class="rectangle-8"></div>
+                        <div class="rectangle-9"></div>
+                        <img class="rectangle-10" src="img/rectangle-29.svg" />
+                        <div class="text-wrapper-6" style="left: 65px;">Vokasi UI</div>
+                    </div>
+                    <div class="rectangle-11"></div>
+                    <div class="overlap-5">
+                        <div class="rectangle-12"></div>
+                        <div class="rectangle-13"></div>
+                        <div class="rectangle-14"></div>
+                    </div>
+                </div>
+                <div class="group-5">
+                    <div class="overlap-6" id="statusContainer">
+                        <div class="text-wrapper-7" id="status"
+                            style="margin-top: 3px;margin-left: 10px; margin-top:4.5px;">
+                            Loading . . .
+                        </div>
+                    </div>
+                </div>
+                <img class="mask-group" src="img/mask-group1.png" />
+                <div class="text-wrapper-8">Kondisi Halte</div>
+                <div class="text-wrapper-9">Grafik keramaian</div>
+                <img class="rectangle-15" id="myImage" style="border-radius: 10%; border: solid black 1px;" />
+                <div class="text-wrapper-10">Information</div>
+                <canvas class="rectangle-16" id="myChart"></canvas>
+                <select class="rectangle-17" id="dateSelect"></select>
+                <img class="frame" src="img/frame-7.png" />
+
+
+                <div class="group-6">
+                    <div class="overlap-7">
+                        <div class="text-wrapper-11">About</div>
+                        <p class="universitas">
+                            <span class="span">Universitas Indonesia , Depok</span> <span
+                                class="text-wrapper-12"></span>
+                        </p>
+                    </div>
+                    <div class="overlap-8">
+                        <p class="selamat-datang-di">
+                            Selamat datang di Bikun O'Meter, sebuah proyek Capstone yang dirancang khusus untuk
+                            memberikan
+                            informasi tentang kondisi di halte saat ini
+                        </p>
+                        <p class="question-and">Question and Feedback ? <br />Contact us at :</p>
+                        <div class="text-wrapper-13">bikunometer@gmail.com</div>
+                    </div>
+
+                    <div class="group-7">
+                        <div class="group-8">
+                            <div class="overlap-group-4">
+                                <div class="text-wrapper-14">00</div>
+                            </div>
+                            <div class="text-wrapper-15">Menwa</div>
+                        </div>
+                        <div class="group-9">
+                            <div class="overlap-9">
+                                <div class="rectangle-18"></div>
+                                <div class="text-wrapper-16">St.UI</div>
+                                <div class="text-wrapper-17">00</div>
+                            </div>
+                        </div>
+                        <div class="group-10">
+                            <div class="overlap-10">
+                                <div class="rectangle-18"></div>
+                                <div class="text-wrapper-18">FPsi</div>
+                                <div class="text-wrapper-17">00</div>
+                            </div>
+                        </div>
+                        <div class="group-11">
+                            <div class="overlap-11">
+                                <div class="rectangle-19"></div>
+                                <div class="text-wrapper-19">FISIP</div>
+                                <div class="text-wrapper-20">00</div>
+                            </div>
+                        </div>
+                        <div class="group-12">
+                            <div class="overlap-12">
+                                <div class="rectangle-20"></div>
+                                <div class="text-wrapper-21">FIB</div>
+                                <div class="text-wrapper-22">00</div>
+                            </div>
+                        </div>
+                        <div class="group-13">
+                            <div class="overlap-10">
+                                <div class="rectangle-18"></div>
+                                <div class="text-wrapper-23">FEB</div>
+                                <div class="text-wrapper-24">00</div>
+                            </div>
+                        </div>
+                        <div class="group-14">
+                            <div class="overlap-13" id="kotak-FT" style="border: solid black 1px; border-radius: 1%;">
+                                <div class="text-wrapper-14" id="person-FT">00</div>
+                            </div>
+                            <div class="text-wrapper-25">FT</div>
+                        </div>
+                        <div class="group-15">
+                            <div class="overlap-14" id="kotak-Vokasi"
+                                style="border: solid black 1px; border-radius: 1%;">
+                                <div class="text-wrapper-14" id="person-Vokasi">00</div>
+                            </div>
+                            <div class="text-wrapper-26">Vokasi</div>
+                        </div>
+                        <div class="group-16">
+                            <div class="overlap-15">
+                                <div class="text-wrapper-14">00</div>
+                            </div>
+                            <div class="text-wrapper-27">Pusgiwa</div>
+                        </div>
+                        <div class="group-17">
+                            <div class="overlap-16">
+                                <div class="text-wrapper-14">00</div>
+                            </div>
+                            <div class="text-wrapper-27">FMIPA</div>
+                        </div>
+                        <div class="group-18">
+                            <div class="overlap-17">
+                                <div class="rectangle-21"></div>
+                                <div class="text-wrapper-21">FIK</div>
+                                <div class="text-wrapper-22">00</div>
+                            </div>
+                        </div>
+                        <div class="group-19">
+                            <div class="overlap-17">
+                                <div class="rectangle-21"></div>
+                                <div class="text-wrapper-28">FKM</div>
+                                <div class="text-wrapper-29">00</div>
+                            </div>
+                        </div>
+                        <div class="group-20">
+                            <div class="overlap-18">
+                                <div class="text-wrapper-14">00</div>
+                            </div>
+                            <div class="text-wrapper-27">RIK</div>
+                        </div>
+                        <div class="group-21">
+                            <div class="overlap-14">
+                                <div class="text-wrapper-14">00</div>
+                            </div>
+                            <div class="st-pocin">St. <br />Pocin</div>
+                        </div>
+                        <div class="group-22">
+                            <div class="overlap-19">
+                                <div class="text-wrapper-14">00</div>
+                            </div>
+                            <div class="text-wrapper-27">Masjid</div>
+                        </div>
+                        <div class="group-23">
+                            <div class="overlap-13">
+                                <div class="text-wrapper-14">00</div>
+                            </div>
+                            <div class="text-wrapper-16">FH</div>
+                        </div>
+                        <div class="group-24">
+                            <div class="overlap-13">
+                                <div class="text-wrapper-30">00</div>
+                            </div>
+                            <div class="text-wrapper-27">Asrama</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <img id="frameImageVokasi" class="frame-2" src="img/frame-1.svg" />
+                <p class="p">(Estimasi pengambilan gambar 0 - 2 menit yang lalu)</p>
+                <div class="BLUE-LINE-MAP">BLUE LINE - MAP</div>
+                <a href="/index.html" class="halte-FEB">Halte - FT ></a>
+                <a class="halte-vokasi">
+                    < Halte - Pusgiwa</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+    <script type="module" defer>
+        var segera = 0;
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBpRpgccvy7JN865L7mQ9jPh4c64ce7t-Q",
+            authDomain: "bikunometer-6a9b1.firebaseapp.com",
+            databaseURL: "https://bikunometer-6a9b1-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "bikunometer-6a9b1",
+            storageBucket: "bikunometer-6a9b1.appspot.com",
+            messagingSenderId: "804334379670",
+            appId: "1:804334379670:web:938a1ca75bf4ac235c58b7"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        var database = firebase.database();
+        var storageRef = firebase.storage().ref();
+
+
+        var dataRef1 = database.ref('Halte-FT/current/Person');
+        var dataRef2 = database.ref('Halte-FT/current/Bus');
+        var imageRef = storageRef.child('data/photo.jpg');
+
+
+        dataRef1.on('value', function (getdata1) {
+            var person = getdata1.val();
+            document.getElementById('myRange').value = person;
+            if (person < 10) {
+                document.getElementById('person').innerHTML = '0' + person;
+                document.getElementById('person-FT').innerHTML = '0' + person;
+            } else {
+                document.getElementById('person').innerHTML = person;
+                document.getElementById('person-FT').innerHTML = person;
+            }
+        })
+
+        dataRef2.on('value', function (getdata2) {
+            var bus = getdata2.val();
+            document.getElementById('bus').innerHTML = bus;
+
+            var frameImage = document.getElementById('frameImage');
+            var statusContainer = document.getElementById('statusContainer');
+            var kotakFt = document.getElementById('kotak-FT');
+
+            if (bus === 1) {
+                kotakFt.style.backgroundColor = 'lawngreen';
+                segera = 1;
+            } else {
+                kotakFt.style.backgroundColor = 'red';
+
+            }
+        })
+
+
+        ////////////////////////////////////
+        var dataRef1 = database.ref('Halte-Vokasi/current/Person');
+        var dataRef2 = database.ref('Halte-Vokasi/current/Bus');
+        var imageRef = storageRef.child('data/photofeb.jpg');
+
+
+        dataRef1.on('value', function (getdata1) {
+            var person = getdata1.val();
+            document.getElementById('myRange').value = person;
+            if (person < 10) {
+                document.getElementById('person').innerHTML = '0' + person;
+                document.getElementById('person-Vokasi').innerHTML = '0' + person;
+
+            } else {
+                document.getElementById('person').innerHTML = person;
+                document.getElementById('person-Vokasi').innerHTML = person;
+            }
+        })
+
+        dataRef2.on('value', function (getdata2) {
+            var bus = getdata2.val();
+            document.getElementById('bus').innerHTML = bus;
+
+            var frameImageVokasi = document.getElementById('frameImageVokasi');
+            var statusContainer = document.getElementById('statusContainer');
+            var kotakVokasi = document.getElementById('kotak-Vokasi');
+
+
+            if (bus === 1) {
+                frameImageVokasi.style.display = 'block';
+                document.getElementById('status').innerHTML = "Ada Bikun Datang!";
+                statusContainer.style.backgroundColor = 'lawngreen';
+                kotakVokasi.style.backgroundColor = 'lawngreen';
+                setTimeout(() => {
+                    frameImageVokasi.style.display = 'none';
+                    document.getElementById('status').innerHTML = "Tidak Ada Bikun~";
+                    statusContainer.style.backgroundColor = 'red';
+                    kotakVokasi.style.backgroundColor = 'red';
+                    segera=0;
+                }, 50000);
+
+            } else if (segera === 1) {
+                document.getElementById('status').innerHTML = "Bikun Akan Tiba!";
+                statusContainer.style.backgroundColor = 'yellow';
+                kotakVokasi.style.backgroundColor = 'yellow';
+                frameImageVokasi.style.display = 'none';
+
+            }
+            else {
+                frameImageVokasi.style.display = 'none';
+                document.getElementById('status').innerHTML = "Tidak Ada Bikun~";
+                statusContainer.style.backgroundColor = 'red';
+                kotakVokasi.style.backgroundColor = 'red';
+
+            }
+        })
+
+        imageRef.getDownloadURL().then(function (url) {
+            document.getElementById('myImage').src = url;
+        }).catch(function (error) {
+            console.error(error);
+        });
+        ///////////////////////
+
+
+        var dataRef = database.ref('Halte-Vokasi');
+
+        var chart; // Declare chart variable outside of the callback
+
+        dataRef.on('value', function (snapshot) {
+            var data = snapshot.val();
+
+            var dateSelect = document.getElementById('dateSelect');
+            dateSelect.innerHTML = '';
+
+            for (var date in data) {
+                if (date === 'current') continue;
+                var option = document.createElement('option');
+                option.text = date;
+                dateSelect.add(option);
+            }
+
+            dateSelect.addEventListener('change', function () {
+                var selectedDate = this.value;
+
+                var labels = [];
+                var busData = [];
+                var personData = [];
+
+                for (var time in data[selectedDate]) {
+                    labels.push(time);
+                    busData.push(data[selectedDate][time]['Bus']);
+                    personData.push(data[selectedDate][time]['Person']);
+                }
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+
+                // If a chart has already been created, destroy it
+                if (chart) {
+                    chart.destroy();
+                }
+
+                // Create a new chart
+                chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Bus',
+                            data: busData,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1
+                        }, {
+                            label: 'Person',
+                            data: personData,
+                            borderColor: 'rgb(255, 99, 132)',
+                            tension: 0.1
+                        }]
+                    }
+                });
+            });
+
+            // Trigger change event to draw the initial chart
+            var event = new Event('change');
+            dateSelect.dispatchEvent(event);
+        });
+
+
+
+    </script>
+</body>
+
+</html>
