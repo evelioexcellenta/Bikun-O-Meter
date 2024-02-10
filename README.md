@@ -14,7 +14,8 @@ This system is aimed to operate without being connected to external power source
 
 ## Result
 Based on the assembly and testing stages, the results show that the tool is capable of sending information about the situation and crowd levels at the Faculty Bus Stop. The graph indicates that the crowd situation at the stop increases at certain times, namely during class schedules. Additionally, a decrease in the graph indicates that the  bus is present to transport passengers.
-<img width="275" alt="download 1" src="https://github.com/evelioexcellenta/Bikun-O-Meter/assets/70692957/c980207b-189a-4aa0-8746-e6d1dde00798">
+
+<img width="750" alt="download 1" src="https://github.com/evelioexcellenta/Bikun-O-Meter/assets/70692957/c980207b-189a-4aa0-8746-e6d1dde00798">
 
 
 
