@@ -1,11 +1,11 @@
 # Bikun-O-Meter
 
 ## Overview
-Our project aims to develop a web-based, battery-powered system for monitoring and analyzing crowd density at bus stops. Using ESP32CAM to capture images, the data is sent to a server to measure parameters such as headcount and stop area density. This system used a TensorFlow lite library and Real-time results are displayed on the website. 
+Our project aims to develop a web-based, battery-powered system for monitoring and analyzing crowd density at bus stops. Using ESP32CAM to capture images, the data is sent to a server to measure parameters such as headcount and stop area density. This system uses a TensorFlow lite framework and Real-time results are displayed on the website. 
 
 
 ## Concept
-This system is divided into three parts: Electrical and Mechanical hardware, Image Recognition processing, and a Website. The microprocessor used is an ESP-32CAM, which connects to a WiFi Modem capable of transmitting captured pictures to Firebase Storage. The pictures are then downloaded by a Raspberry Pi 3B server and processed using an Image Recognition Algorithm from the TensorFlow Lite library to identify the number of people and buses at the bus stop. The processed data is then uploaded to a website in real-time via the Firebase Realtime Database. For the power source, this system used a 5V battery module consisting of 2 18650 batteries connected in series and the voltage supply passes through a step-down buck converter.
+This system is divided into three parts: Electrical and Mechanical hardware, Image Recognition processing, and a Website. The microprocessor used is an ESP-32CAM, which connects to a WiFi Modem capable of transmitting captured pictures to Firebase Storage. The pictures are then downloaded by a Raspberry Pi 3B server and processed using an Image Recognition Algorithm from the TensorFlow Lite framework to identify the number of people and buses at the bus stop. The processed data is then uploaded to a website in real-time via the Firebase Realtime Database. For the power source, this system used a 5V battery module consisting of 2 18650 batteries connected in series and the voltage supply passes through a step-down buck converter.
 
 The system provides a user-friendly web interface for accessing real-time data and includes a feature for storing historical data to observe crowd trends over time. With innovative technology and battery energy, this adaptable system can be installed at various bus stop locations without relying on external power sources.
 
@@ -19,9 +19,5 @@ Based on the assembly and testing stages, the results show that the tool is capa
 
 
 
-
  ## Visit our website at: 
  https://bikun-o-meter.netlify.app/
- or scan the QR code:
-
-![Screenshot 2024-01-26 at 18 11 22](https://github.com/evelioexcellenta/Bikun-O-Meter/assets/106600068/fc5a05f8-fc74-4853-800e-14b35886ce95)
